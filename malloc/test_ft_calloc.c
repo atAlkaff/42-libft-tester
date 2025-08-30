@@ -1,6 +1,6 @@
 #include <criterion/criterion.h>
-#include <stdlib.h>	// calloc(), free(), NULL
-#include <stdint.h>
+#include <stdlib.h>	// calloc(), free(), NULL, size_t
+#include <stdint.h>	// SIZE_MAX, PTRDIFF_MAX
 #include "libft.h"
 
 Test(ft_calloc, correct_size_zeroed_memory_freeable)

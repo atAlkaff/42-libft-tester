@@ -1,5 +1,5 @@
 #include <criterion/criterion.h>
-#include <ctype.h>
+#include <ctype.h>	// libc ctype functions
 #include <limits.h>	// UCHAR_MAX (usually 255)
 #include <stdio.h>	// EOF (usually -1)
 #include "libft.h"
