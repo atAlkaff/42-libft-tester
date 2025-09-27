@@ -2,6 +2,14 @@
 #include <string.h>	// memset()
 #include "libft.h"
 
+Test(ft_memset, returns_dest)
+{
+	char buf[10];
+
+	cr_assert_eq(ft_memset(buf, 'A', sizeof buf), buf,
+		"ft_memset() did not return dest");
+}
+
 Test(ft_memset, zero_length)
 {
 	char buf[10] = {0};
