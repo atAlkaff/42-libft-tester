@@ -46,4 +46,6 @@ Test(ft_strlcpy, empty_string)
 
 	cr_assert_str_empty(dest,
 		"ft_strlcpy() did not copy an empty string");
+	cr_assert_eq(length, strlen(src),
+		"ft_strlcpy() did not return the length of src");
 }

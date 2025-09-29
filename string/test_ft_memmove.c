@@ -56,7 +56,7 @@ Test(ft_memmove, overlap_fwd)
 {
 	char buf[20] = "1234567890";
 	ft_memmove(buf + 2, buf, 5);
-	cr_assert_str_eq(buf, "1212345670",
+	cr_assert_str_eq(buf, "1212345890",
 		"ft_memmove() did not properly handle a forward overlap");
 }
 

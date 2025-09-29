@@ -8,7 +8,7 @@ Test(ft_bzero, zero_length)
 
 	memset(buf, 'A', sizeof buf);
 	ft_bzero(buf, 0);
-	cr_assert_neq(buf[0], 'A',
+	cr_assert_eq(buf[0], 'A',
 		"ft_bzero() attempted to modify the buffer"
 		"when a 0 byte change was requested");
 }

@@ -50,7 +50,7 @@ Test(ft_memset, partial_fill_with_nonzero_byte)
 
 	memset(libc_buf, 'A', sizeof libc_buf);
 	ft_memset(buf, 'A', 5);
-	cr_assert_arr_eq(&buf[5], &libc_buf[5], 5,
+	cr_assert_arr_neq(&buf[5], &libc_buf[5], 5,
 		"ft_memset() filled more bytes than required");
 }
 
