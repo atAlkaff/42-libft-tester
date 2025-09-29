@@ -66,4 +66,5 @@ Test(ft_strdup, modifiable_memory)
 
 	cr_assert_str_eq(result, "AAAlo",
 		"Failed to modify buffer returned by ft_strdup()");
+	free(result);
 }
