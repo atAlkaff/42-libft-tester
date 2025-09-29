@@ -61,7 +61,7 @@ Test(ft_strlcat, empty_src)
 	size_t expected = strlen(src) + strlen(dest);
 	size_t length = ft_strlcat(dest, src, sizeof dest);
 
-	cr_assert_str_eq(dest, "Hello"
+	cr_assert_str_eq(dest, "Hello",
 		"ft_strlcat() appended characters when src was empty");
 	cr_assert_eq(length, expected,
 		"ft_strlcat() did not return the length of the total string");
@@ -75,7 +75,7 @@ Test(ft_strlcat, dest_bigger_than_dstsize)
 	size_t expected = strlen(src) + n;
 	size_t length = ft_strlcat(dest, src, n);
 
-	cr_assert_str_eq(dest, "Hello"
+	cr_assert_str_eq(dest, "Hello",
 		"ft_strlcat() appended characters past dstsize");
 	cr_assert_eq(length, expected,
 		"ft_strlcat() did not return the length of the total string");
