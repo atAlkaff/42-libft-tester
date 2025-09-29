@@ -21,24 +21,28 @@ Test(ft_memcmp, difference_at_last_byte)
 {
 	char a[] = "abc";
 	char b[] = "abd";
-	cr_assert_lt(ft_memcmp(a, b, 3), 0);
+	cr_assert_lt(ft_memcmp(a, b, 3), 0,
+		"ft_memcmp() missed a difference at the end");
 }
 
 Test(ft_memcmp, zero_length)
 {
-	cr_assert_eq(ft_memcmp("abc", "xyz", 0), 0);
+	cr_assert_eq(ft_memcmp("abc", "xyz", 0), 0,
+		"ft_memcmp() returned nonzero when asked to compare 0 bytes");
 }
 
 Test(ft_memcmp, embedded_null_bytes)
 {
 	char a[] = {'a', '\0', 'c'};
 	char b[] = {'a', '\0', 'd'};
-	cr_assert_lt(ft_memcmp(a, b, 3), 0);
+	cr_assert_lt(ft_memcmp(a, b, 3), 0,
+		"ft_memcmp() wrongly null terminated");
 }
 
 Test(ft_memcmp, same_prefix_different_lengths)
 {
 	char a[] = "abc";
 	char b[] = "abcd";
-	cr_assert_eq(ft_memcmp(a, b, 3), 0);
+	cr_assert_eq(ft_memcmp(a, b, 3), 0,
+		"ft_memcmp() read past more than n bytes");
 }
